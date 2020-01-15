@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Sunflower:300&display=swap');
+body {
+  width: 75%;
+  margin: 0px auto;
+  /* margin을 세로는 0픽셀 가로는 auto로 주게되면 */
+  /* 중앙에 정렬되게 됨 */
+  font-family: 'Nanum Pen Script', cursive;
+  padding:20px; 
+}
+h1,h2,h3{
+  font-weight:normal;
+  color:#0088dd;
+  margin:0px;
+}
+h1{
+  font-family:Georgia,TImes,serif;
+  font-size:250%;
+  text-shadow:2px 2px 3px #666666;
+  padding-bottom:0px;
+}
+h2{
+  font-family:"맑은 고딕",돋움,굴림;
+  font-size:100%;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+}
+h3{
+  font-size:150%;
+}
+p{
+  font-family: 'Sunflower', sans-serif;
+  line-height:1.4em;
+  font-size: 120%;
+  color:#665544;
+}
+p.intro:first-line {
+  font-weight:bold;
+}
+.credits{
+  font-style:italic;
+  text-align:right;
+  padding-right:50px;
+}
+a{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+  /* hover : 마우스 커서가 해당 태그에 올라갔을때 */
+}

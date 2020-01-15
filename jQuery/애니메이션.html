@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery - Animation</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+      body {
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f4f4;
+        line-height: 1.5em;
+      }
+      header {
+        background: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px solid black;
+        margin-bottom: 10px;
+      }
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+      #box {
+        background: #333;
+        color: white;
+        width: 300px;
+        height: 90px;
+        padding: 40px;
+        text-align: center;
+      }
+      #box2 {
+        background: red;
+        width: 100px;
+        height: 100px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>효과 및 애니메이션</h1>
+    </header>
+    <div id="container">
+      <!-- 페이드 효과 -->
+      <button id="btnFadeOut">Fade out</button>
+      <button id="btnFadeIn">Fade In</button>
+      <button id="btnFadeTog">Fade Toggle</button>
+      <hr />
+      <!-- 슬라이드 효과 -->
+      <button id="btnSlideUp">Slide Up</button>
+      <button id="btnSlideDown">Slide Down</button>
+      <button id="btnSlideTog">Slide Toggle</button>
+      <button id="btnStop">STOP</button>
+      <div id="box"><h1>페이드 / 슬라이드</h1></div>
+      <!-- 애니메이션 이동 -->
+      <hr />
+      <button id="moveLeft">이동 왼쪽</button>
+      <button id="moveRight">이동 오른쪽</button>
+      <button id="moveAround">이동 어라운드</button>
+      <hr />
+      <div id="box2"></div>
+    </div>
+
+    <script>
+      //자바스크립트 작성
+      $(document).ready(function() {
+        // 페이드 아웃
+        $("#btnFadeOut").on("click", function() {
+          $("#box").fadeOut(2000, function() {
+            $("#btnFadeOut").text("사라짐");
+            // 버튼 클릭시 버튼에 "사라짐" 텍스트 출력
+          });
+        });
+        // 페이드 인
+        $("#btnFadeIn").on("click", function() {
+          $("#box").fadeIn("slow");
+        });
+        // 페이드 토글
+        $("#btnFadeTog").on("click", function() {
+          $("#box").fadeToggle("fast");
+          //(slow, fast, 숫자(ms)로 속도 조절)
+        });
+        // 슬라이드 업
+        $("#btnSlideUp").on("click", function() {
+          $("#box").slideUp(2000);
+        });
+        // 슬라이드 다운
+        $("#btnSlideDown").on("click", function() {
+          $("#box").slideDown(2000);
+        });
+        // 슬라이드 토글
+        $("#btnSlideTog").on("click", function() {
+          $("#box").slideToggle(2000);
+        });
+        // 정지 버튼
+        $("#btnStop").on("click", function() {
+          $("#box").stop();
+        });
+        $("#moveRight").on("click", function() {
+          $("#box2").animate({
+            left: 500,
+            height: "300px",
+            width: "300px",
+            opacity: "0.5"
+          });
+        });
+        $("#moveLeft").on("click", function() {
+          $("#box2").animate({
+            left: 0,
+            height: "100px",
+            width: "100px",
+            opacity: "1"
+          });
+        });
+        $("#moveAround").on("click", function() {
+          let box = $("#box2");
+          box.animate({
+            left: 300
+          });
+          box.animate({
+            top: 200
+          });
+          box.animate({
+            left: 0
+          });
+          box.animate({
+            top: 0
+          });
+        });
+      }); 
+    </script>
+  </body>
+</html>

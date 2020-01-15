@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <!-- 다운로드 방법 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+      .list-group > a.list-group-item {
+        text-decoration: none;
+      }
+    </style>
+    <script>
+      $(document).ready(function() {
+        $("#myList>li").on("mouseenter", function() {
+          $(this).addClass("active");
+        });
+        $("#myList>li").on("mouseleave", function() {
+          $(this).removeClass("active");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="list-group mb-5">
+        <li class="list-group-item">My List Item One</li>
+        <li class="list-group-item">My List Item Two</li>
+        <li class="list-group-item">My List Item Three</li>
+        <li class="list-group-item">My List Item Four</li>
+        <li class="list-group-item">My List Item Five</li>
+      </ul>
+      <ul class="list-group mb-5">
+        <a href="#" class="list-group-item">My List Item One</a>
+        <a href="#" class="list-group-item">My List Item Two</a>
+        <a href="#" class="list-group-item active">My List Item Three</a>
+        <a href="#" class="list-group-item">My List Item Four</a>
+        <a href="#" class="list-group-item">My List Item Five</a>
+      </ul>
+      <ul class="list-group mb-5">
+        <li class="list-group-item">Regular List Item</li>
+        <li class="list-group-item list-group-item-primary">
+          Primary List Item
+        </li>
+        <li class="list-group-item list-group-item-secondary">
+          Secondary List Item
+        </li>
+        <li class="list-group-item list-group-item-info">Info List Item</li>
+        <li class="list-group-item list-group-item-warning">
+          Warning List Item
+        </li>
+        <li class="list-group-item list-group-item-danger">Danger List Item</li>
+        <li class="list-group-item list-group-item-light">Light List Item</li>
+        <li class="list-group-item list-group-item-dark">Dark List Item</li>
+      </ul>
+      <ul class="list-group list-group-flush mb-5">
+        <a href="#" class="list-group-item">My List Item One</a>
+        <a href="#" class="list-group-item">My List Item Two</a>
+        <a href="#" class="list-group-item">My List Item Three</a>
+        <a href="#" class="list-group-item">My List Item Four</a>
+        <a href="#" class="list-group-item">My List Item Five</a>
+      </ul>
+      <ul class="list-group mb-5" id="myList">
+        <li class="list-group-item">My List Item One</li>
+        <li class="list-group-item d-flex">
+          My List Item Two
+          <span class="badge badge-primary ml-auto">30</span>
+        </li>
+        <li class="list-group-item">My List Item Three</li>
+        <li class="list-group-item">My List Item Four</li>
+        <li class="list-group-item">My List Item Five</li>
+      </ul>
+    </div>
+  </body>
+</html>

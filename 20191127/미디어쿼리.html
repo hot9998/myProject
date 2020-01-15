@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>미디어쿼리</title>
+	<style>
+		/* 가로 길이에 따라 각각의 백그라운드 색상 적용
+		크롬 개발자 창에 토글 디바이스 툴바를 이용하면
+		기기별로 어떤 화면이 나타나는지 볼 수 있음 */
+	
+		body{
+			background: aqua;
+		}
+		@media screen and (min-width:576px){
+			body{
+				background: red;
+			}
+		}
+		@media screen and (min-width:768px){
+			body{
+				background: blue;
+			}
+		}
+			@media screen and (min-width:992px){
+			body{
+				background: green;
+			}
+		}
+			@media screen and (min-width:1200px){
+			body{
+				background: yellow;
+			}
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

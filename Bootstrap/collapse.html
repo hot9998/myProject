@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>collapse</title>
+    <!-- 다운로드 방법 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3><code>속성 data-toggle 공통</code></h3>
+      <!-- a태그에서는 링크에 collapse 사용할 id를 적어줌 -->
+      <a href="#collapseExample" class="btn btn-primary" data-toggle="collapse">
+        링크</a
+      >
+      <!-- 버튼태그에서는 data-target에 collapse 사용할 id를 적어줌 -->
+      <button
+        class="btn btn-primary"
+        data-toggle="collapse"
+        data-target="#collapseExample"
+      >
+        버튼
+      </button>
+    </div>
+    <div class="collapse show" id="collapseExample">
+      <div class="card card-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+        odio!
+      </div>
+    </div>
+    <!-- 두개의 collapse 아이템 -->
+    <div class="container">
+      <h3><code>두개의 아이템</code></h3>
+      <!-- a태그에서는 링크에 collapse 사용할 id를 적어줌 -->
+      <a
+        href="#collapseExample1"
+        class="btn btn-primary"
+        data-toggle="collapse"
+      >
+        링크</a
+      >
+      <!-- 버튼태그에서는 data-target에 collapse 사용할 id를 적어줌 -->
+      <button
+        class="btn btn-primary"
+        data-toggle="collapse"
+        data-target="#collapseExample2"
+      >
+        버튼
+      </button>
+      <button
+        class="btn btn-success"
+        data-toggle="collapse"
+        data-target=".exam"
+      >
+        둘 다
+      </button>
+      <button class="btn btn-danger" id="btn1">
+        자바스크립트
+      </button>
+    </div>
+    <div class="collapse show exam" id="collapseExample1">
+      <div class="card card-body">
+        1111 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Repudiandae, odio!
+      </div>
+    </div>
+    <div class="collapse show exam" id="collapseExample2">
+      <div class="card card-body">
+        2222 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Repudiandae, odio!
+      </div>
+    </div>
+    <script>
+      // 자바스크립트 방법
+      $(function() {
+        console.log("ready!");
+        $("#btn1").on("click", function() {
+          console.log("cliked!");
+          var collapses = $(".collapse");
+          // collapse 클래스 요소들을 변수 collapses에 담음
+          collapses.each(function() {
+            // collapses에 담긴 요소들을 클릭 시 토글 이벤트 발생
+            $(this).collapse("toggle");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

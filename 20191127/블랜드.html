@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>블랜드</title>
+	<style>
+		html, body{
+			height: 100%;
+			/* 백그라운드 크기를 퍼센트로 조절하기 위해서
+			상위태그인 html과 body의 크기를 100%로 줌 */
+		}
+		.blend{
+			background-image: url(images/image1.jpg);			
+			background-color: violet;
+			background-blend-mode: multiply;
+			height: 80%;
+			width: 70%;	
+			background-size: cover;
+			background-repeat: no-repeat;
+			border: 5px solid skyblue;
+			transition: background-color 5s;
+		}
+		.blend:hover{
+			background-color: lightseagreen;			
+		}
+	</style>
+</head>
+<body>
+	<div class="blend"></div>	
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS 선택자</title>
+	<Style>
+		/* body{
+			background-color: lightblue;
+		}
+		*{
+			color: lightpink;
+		}
+		h1{
+			color: darkolivegreen;
+			background-color: khaki;
+		}
+		p{
+			color: lightsalmon;
+			background-color:teal;
+		}
+		.first_p{
+			클래스 선택자는 앞에 "."를 붙여줘야 함
+			background-color: red;
+		} 
+		 #first_h{
+			color: white;
+			background-color: tomato;
+		} */
+	/* .first_p, #first_h{
+		그룹 선택자 : 한번에 여러가지 선택자 동시에 지정 
+		background-color: red;
+		color: yellow;
+	}*/
+	/* div p{
+		div p : div태그 아래의 p태그에 적용
+		color: red;
+		background-color: black;
+	} */
+	div{
+		background-color: yellow;
+	}
+	.div1>p{
+		/* div1>p :d div1 클래스 아래의 직계태그까지 적용 */
+		color: red;
+		background-color: black;
+	}		
+	</Style>
+</head>
+<body>
+	<!-- id와 class는 다르기때문에 이름이 같아도 무방 -->
+	<!-- id는 한 문서에 하나만 사용 가능 -->
+	<!-- <h1 class="first_h" id="first_h">CSS 선택자</h1>	
+	<p class="first_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quo.</p>
+	<p class="second_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum.</p>
+	<p class="third_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, quidem?</p>
+	<p class="first_p">Lorem ipsum dolor sit amet.</p> -->
+	
+	<div class="div1">
+		<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eligendi!</h3>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, quae.</p>
+		<div>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, laudantium!</p>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, quasi.</p>
+		</div>		
+	</div>
+
+	
+</body>
+</html>

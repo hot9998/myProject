@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>포지션 예제</title>
+	<style>
+	#main {
+	position: relative;
+	height: 200px;
+	width: 200px;
+	border: 1px solid black;
+	}
+	#center {
+		position: relative;
+		left:50px;
+		top:50px;
+		border: 1px solid black;
+		width: 100px;height: 100px; 
+	}
+	div { height: 50px; width: 50px;}
+	.blue { background-color: lightblue; position: absolute; }
+	.green {background-color: lightgreen; position: absolute; right:0 }
+	.yellow { background-color: yellow; position: absolute; right:0; bottom:0; }
+	.red { background-color: lightpink; position: absolute;  bottom:0; }	
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div class="main blue"></div>
+		<div class="main green"></div>
+		<div class="main yellow"></div>
+		<div class="main red"></div>
+		<div id="center">
+			<div class="main blue"></div>
+			<div class="main green"></div>
+			<div class="main yellow"></div>
+			<div class="main red"></div>
+		</div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>postion 속성</title>
+	<style>
+		.container {
+			width: 600px;
+			margin: 0 auto;
+			height: 300px;
+			position: relative;
+			border: 2px solid gray;
+		}
+		.box {
+			width: 100px;
+			height: 100px;
+		}
+		.red {
+			background: tomato;
+		}
+		.green {
+			background: yellowgreen;
+		}
+		.blue {
+			background: skyblue;
+		}
+		.relative {
+		/* relative : 상대 좌표 */
+		/* 원래 있던 위치에서 주어진 수치만큼 이동 */
+		
+			position: relative;
+			top: -15px;
+			left: -25px;
+		}
+		
+		.absolute {
+		/* absolute : 절대 좌표 */
+		/* 상위 태그 위치(container)를 기준으로 이동 */
+		/* float 처럼 자신의 공간을 비우게 됨 */
+		/* absolute 속성을 사용 하려면 부모의 position이 static 이면 안 됨 */
+			position: absolute;
+			top: 15px;
+			left: 25px;
+		}
+		
+		.fixed {
+		/* fixed : 화면에 상관없이 항상 지정한 곳에 위치 */
+			background: violet;
+			position: fixed;
+			bottom : 20px;
+			right : 20px;
+		}			
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box red"></div>
+		<div class="box green absolute"></div>
+		<div class="box blue"></div>	
+		<div class="box fixed"></div>	
+	</div>
+	
+</body>
+</html>

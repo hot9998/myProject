@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery 제이쿼리</title>
+    <!-- 제이쿼리 CDN 링크 -->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- 제이쿼리 다운로드 -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+      body {
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f4f4;
+        line-height: 1.5em;
+      }
+      header {
+        background: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px solid black;
+        margin-bottom: 10px;
+      }
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>제이쿼리 셀렉터</h1>
+    </header>
+    <div id="container">
+      <h1 id="heading1">제목 1</h1>
+      <p id="para1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam ut
+        consequuntur laudantium labore at?<span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi
+          quaerat recusandae nam distinctio dolores, quia, maiores facilis
+          laboriosam impedit voluptatem sapiente optio omnis eveniet dicta
+          necessitatibus excepturi soluta saepe.</span
+        >
+        Alias, ipsa, quasi iure amet placeat ad consequatur harum soluta in
+        architecto beatae cumque dolores dolorem.
+      </p>
+      <h1 class="heading2">제목 2</h1>
+      <p class="para2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+        recusandae neque veritatis ex. Porro commodi quia reprehenderit
+        perferendis, officia nulla cumque, quas aperiam doloremque modi,
+        officiis accusamus rerum dignissimos! Quidem.
+      </p>
+      <!-- 리스트 -->
+      <ul id="list">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+        <li>list item 6</li>
+        <li>list item 7</li>
+        <li>list item 8</li>
+        <li>list item 9</li>
+        <li>list item 10</li>
+      </ul>
+    </div>
+    <!-- input -->
+    <input type="button" value="button" />
+    <input type="submit" value="submit" />
+    <input type="text" />
+    <!-- 링크 -->
+    <a href="https://www.google.com/">구글</a>
+    <a href="https://www.naver.com/">네이버</a>
+
+    <!-- 스크립트의 기본 위치 : 바디태그 마지막 부분 -->
+    <script>
+      // $("h1").hide();
+      // $("h1.heading2").hide();
+      // $("p span").css("color", "red");
+      $("ul#list li:first, ul#list li:last").css("color", "red");
+      $("ul#list li:even").css("background-color", "yellowgreen");
+      $("ul#list li:odd").css("background-color", "pink");
+      $("ul#list li:nth-child(3n)").css("list-style", "none");
+      // $(":text").hide(); 타입 선택
+
+      // 속성 선택
+      $("[href]").css("color", "red");
+      $('[href="https://www.naver.com/"]').css("color", "black");
+      // $("*").hide();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>네비게이션</title>
+    <!-- 다운로드 방법 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container mb-3">
+      <h3><code>버튼 드롭</code></h3>
+      <div class="dropdown dropright">
+        <button
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          data-toggle="dropdown"
+        >
+          Dropdown Button
+        </button>
+        <div class="dropdown-menu">
+          <div class="dropdown-header">링크 모음</div>
+          <a href="#" class="dropdown-item">Link 1</a>
+          <a href="#" class="dropdown-item">Link 2</a>
+          <a href="#" class="dropdown-item">Link 3</a>
+          <div class="dropdown-header">액션 모음</div>
+          <a href="#" class="dropdown-item">Action 1</a>
+          <a href="#" class="dropdown-item">Action 2</a>
+          <a href="#" class="dropdown-item">Action 3</a>
+        </div>
+      </div>
+    </div>
+    <!-- 네비게이션 바 -->
+    <!-- 메뉴바는 컨테이너 안에 넣지 않는다 -->
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <!-- 메뉴리스트 -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Link 1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Link 2</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Link 3</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Link 1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Link 2</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link disabled">Link 3</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <!-- 제목/로고 -->
+      <a href="#" class="navbar-brand">로고</a>
+      <!-- 네브바 자동 토글 버튼 -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navB"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navB" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Link 1</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Link 2</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link disabled">Link 3</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+              Dropdown
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">링크 모음</div>
+              <a href="#" class="dropdown-item">Link 1</a>
+              <a href="#" class="dropdown-item">Link 2</a>
+              <a href="#" class="dropdown-item">Link 3</a>
+              <div class="dropdown-header">액션 모음</div>
+              <a href="#" class="dropdown-item">Action 1</a>
+              <a href="#" class="dropdown-item">Action 2</a>
+              <a href="#" class="dropdown-item">Action 3</a>
+            </div>
+          </li>
+        </ul>
+        <!-- 메뉴 리스트 끝 -->
+        <!-- 서치바 시작 -->
+        <form action="" class="form-inline ml-auto">
+          <input type="text" class="form-control" placeholder="Search" />
+          <button class="btn btn-success" type="submit">검색</button>
+        </form>
+      </div>
+    </nav>
+  </body>
+</html>

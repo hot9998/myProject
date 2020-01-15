@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Box shadow</title>
+	<style>
+		div {
+			width: 600px;
+			margin-bottom: 20px;
+			padding: 10px 30px;
+			border: 1px solid black;
+    	  }
+		.a {
+			box-shadow: 5px 5px green;
+		}
+		.b {
+			box-shadow: 5px 5px 5px yellow ;
+		}
+		.c {
+			box-shadow: 5px 5px 5px 5px red;
+			/* x축 y축 번짐정도 번짐거리 색 */
+		}
+		.d {
+			box-shadow: 5px 5px 5px 5px yellowgreen;
+		}
+		.e {
+			box-shadow: 5px 5px 5px 5px gray inset;
+			/* inset : 그림자가 바깥이 아닌 안 쪽에 생김 */
+		}	
+	</style>
+</head>
+<body>
+	<div class="a">
+		<p><code>box-shadow: 5px 5px green;</code></p>
+	</div>
+	<div class="b">
+		<p><code>box-shadow: 5px 5px 5px yellow;</code></p>
+	</div>
+	<div class="c">
+		<p><code>box-shadow: 5px 5px 5px 5px red;</code></p>
+	</div>
+	<div class="d">
+		<p><code>box-shadow: 5px 5px 5px 5px yellowgreen;</code></p>
+	</div>
+	<div class="e">
+		<p><code>box-shadow: 5px 5px 5px 5px gray inset;</code></p>
+	</div></body>
+</html>

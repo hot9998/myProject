@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>함수 예제</title>
+</head>
+<body>
+	<script>
+		function ask(question, yes, no) {			
+ 			if (confirm(question)) yes()
+  			else no();
+		}		
+		function agree(){
+			alert('동의했습니다.');
+		}
+		function cancle(){	
+			alert('취소했습니다.');
+		}	
+		ask('동의하세요?',agree,cancle);
+	</script>
+	
+</body>
+</html>

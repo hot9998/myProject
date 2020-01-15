@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>문서객체모델</title>
+</head>
+<body>
+	<div id="eID">
+		<div class="eClass">Element1</div>
+		<div class="eClass">Element2</div>
+		<div class="eClass">Element3</div>
+		<div class="eClass">Element4</div>
+		<div class="eClass">Element5</div>
+		<div class="eClass">Element6</div>
+		<div class="eClass">Element7</div>
+	</div>
+
+	<script>
+		var eID = document.getElementById('eID'); // 문서에서 유일한 1개의 아이디
+		eID.style.background = 'red';
+
+		var eClass = document.querySelectorAll('.eClass');  // 모든 eClass 배열
+		console.log(eClass);
+		// for 문으로 eClass의 모든 요소의 글자색을 yellow로 변경
+		for (let i=0;i<eClass.length;i++){
+	    	eClass[i].style.color = 'yellow';
+		}
+		// eID의 배경을 빨간색에서 회색으로 변경
+		// eClass 요소의 글자 색상을 빨주노초파남보로 변경
+		eID.style.background = 'gray';
+		var eColor = [
+			// 컬러 배열을 새로 선언
+			'rgb(255,0,0)',
+			'rgb(255,50,0)',
+			'rgb(255,255,0)',
+			'rgb(0,255,0)',
+			'rgb(0,0,255)',
+			'rgb(0,5,255)',
+			'rgb(100,0,255)'
+		]
+		for (let i=0;i<eClass.length;i++){
+	    	eClass[i].style.color = eColor[i];
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>센터박스</title>
+	<style>
+		.box{
+            width: 200px;
+            height: 50px;
+            border: 1px solid blueviolet;
+			color: skyblue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			/* flex를 사용하여 박스 정중앙에 정렬 */
+		}
+        .center1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+			margin-top: -25px;
+			margin-left: -100px;
+        }
+        .center2{
+            position: absolute;
+            top: 50%;
+            left: 50%; 
+			transform: translate(-50%, -50%);			
+		}		
+	</style>
+</head>
+<body>
+	<div class="box center2">정중앙으로</div>
+</body>
+</html>

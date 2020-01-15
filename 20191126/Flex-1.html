@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Flex-1</title>
+	<style>
+		html, body {
+			background-color: #ffeead;
+			margin: 10px;
+		}
+		.container > div {
+			padding: 10px;
+			text-align: center;
+			font-size: 2em;
+			color: #ffeead;
+		}
+        .home {
+			background-color: #96ceb4;
+			/* margin-right: auto; */
+			flex: 1;
+			order: 1;
+			/* flex : 입력한 값만큼 크기 비율 */
+			/* order : 정렬하는 순서를 결정 */
+		}
+		.search {
+			background-color: #ff6f69;
+			flex: 2;
+			order: 3;
+		}
+		.logout {
+			background-color: skyblue;
+			margin-left: auto;
+			flex: 1;
+			order: 2;
+		}
+		.container {
+			border: 5px solid #ffcc5c;
+			display: flex;
+			justify-content: flex-start;
+		}
+	</style>
+</head>
+<body>
+	<nav class="container">
+		<div class="home">Home</div>
+		<div class="search">Search</div>
+		<div class="logout">Logout</div>
+	</nav>
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>SELECT OPTION</title>
+</head>
+<body>
+	<!-- select , option : 여러 옵션중에서 선택-드랍다운 목록 -->
+	<select name="fruits" size="4" multiple>
+		<!-- size : 메뉴의 항목 개수 지정 -->
+		<!-- multiple : Ctrl, Shift 키로 여러개의 항목 선택가능 -->
+		<option value="">--선택--</option>
+		<option value="apple">사과</option>
+		<option value="banana">바나나</option>
+		<option value="grape" selected>포도</option>
+		<!-- selected : 그 값을 기본값으로 선택 -->				
+	</select><br><br>
+	
+	<form>
+		<select name="fruits2">
+			<optgroup label="과일">
+				<option value="apple">사과</option>
+				<option value="banana">바나나</option>
+				<option value="grape">포도</option>
+			</optgroup>
+			<optgroup label="야채">
+				<option value="cabbage">양배추</option>
+				<option value="carrot">당근</option>
+				<option value="onion">양파</option>
+				<!-- optgroup : 여러 항목을 그룹으로 묶을 때 사용 -->
+				<!-- label 속성을 이용해 그룹이름을 붙임 -->
+			</optgroup>
+		</select>
+	</form><br>
+	
+	<form>
+		<!-- datalist : select option과 달리 선택지에 없는 값도 제출 가능 -->
+		<input list="browsers" name="browser">
+		<datalist id="browsers">
+			<option value="Internet Explorer">
+			<option value="Firefox">
+			<option value="Chrome">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist>
+		<input type="submit">
+	</form><br>
+	<!-- textarea : 여러줄의 텍스트 입력 -->		
+	<textarea name="input1" id="" cols="60" rows="30" placeholder="여기에 긴글을 입력"></textarea>
+	
+</body>
+</html> 

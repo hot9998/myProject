@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>가상 클래스</title>
+	<style>
+		div{
+			background-color: green;
+			color: white;
+			padding: 25px;
+			text-align: center;
+			transition: 1s;
+		}		
+		div:hover{
+			/* div에 마우스를 올렸을 때 적용 */
+			background-color: blue;			
+		}
+		/* p{
+			display: none;
+			background-color: yellow;
+			padding: 20px;
+			
+		} */
+		div:hover + p{
+			/* div에 마우스를 올렸을 때 바로 다음 p에 적용 */
+			display: block
+		}
+		input:focus{
+			/* input에 입력창이 활성화 됐을 때 적용 */
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<!-- <p>마우스를 올리면 배경색이 변함</p>		
+
+	<div>마우스를 올려주세요</div>
+
+	<div>마우스를 올리면</div>
+
+	<p>문장이 나타남</p> -->
+	<p>입력창을 선택하면 배경색이 바뀜:</p>
+	<form>
+		이름: <input type="text" name="firstname"><br>
+		번호: <input type="text" name="lastname">
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,93 @@
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html,body { height: 100%;}
+body {     
+    font-family: Circular,-apple-system,BlinkMacSystemFont;
+}
+.main-page{
+    height: 100%;
+    background-image: url("airbnb/Images/0ffd8594-f123-43f0-85bb-7ef88c6f0624.jpg");
+    background-repeat: no repeat;
+    background-size: cover;
+}
+.main-navi { 
+    padding: 30px;
+    height: 110px;
+    display: flex;
+    justify-content: flex-end;
+}
+.main-navi .item > a {
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+}
+.main-navi .item {
+    margin-left: 30px;
+    position: relative;
+}
+.main-navi .logo{
+    margin-right: auto;
+}
+.main-navi .item:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Main form */
+.main-form {
+    background-color: white;
+    margin-left: 10%;
+    margin-top: 1%; 
+    padding: 32px 32px 24px 32px;
+    width: 441px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+.bottom-text .item{
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    position: absolute; bottom: 2%; right: 2%;
+    text-align: right;
+    line-height: 150%;
+}
+.bottom-text .item:hover{
+    text-decoration: underline;
+}
+.main-form h1{
+    color: #484848;
+    font-size: 30px;
+    line-height: 36px;
+}
+.main-form p{
+    font-size: 12px;
+    color: #484848;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+.main-form .box{
+    border-radius: 3px;
+    height: 48px;
+    font-size: 17px;
+    margin-top: 8px;  
+    padding-left: 12px;
+    padding-right: 12px;
+    box-shadow: none;
+    border : 1px solid #EBEBEB;
+}
+.main-form .box:focus{
+    border: 1px solid rgb(0, 132, 137);
+}
+.main-form .box1{
+    width: 377px;    
+}
+.main-form .box2{
+    widows: 185.5px;
+}

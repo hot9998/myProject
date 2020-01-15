@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>박스 사이즈</title>
+	<style>
+		.box {
+			width: 300px;
+			height: 100px;
+		}
+
+		.box1 {
+			border: 1px solid blue;
+		}
+		.box2 {
+			padding: 50px;
+			border: 1px solid red;
+		}
+		.box3 {
+			border: 1px solid blue;
+			box-sizing: border-box;
+		}
+		.box4 {
+			padding: 50px;
+			border: 1px solid red;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="box box1">box1</div>
+	<div class="box box2">box2 padding</div>
+	<div class="box box3">box3</div>
+	<div class="box box4">box4 padding</div>
+	
+</body>
+</html>

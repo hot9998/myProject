@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>링크</title>
+	<style>
+		.none{
+			text-decoration: none;
+			color: green;
+		}	
+		a:link{
+			/* 기본 상태 */
+			text-decoration: none;
+			color: blue;
+		}
+		a:visited{
+			/* 방문 한 상태 */
+			text-decoration: none;
+			color: red;
+		}
+		a:hover{
+			/* 마우스를 올렸을 때 */
+			text-decoration: underline hotpink;
+			color: skyblue;
+		}
+		a:active{
+			/* 마우스를 클릭했을 때 */
+			text-decoration: underline blueviolet;
+			color: skyblue;
+		}
+		.link-button{
+			background-color:#f44336;
+			color: white;
+			padding: 14px 25px;
+			text-align: center; 
+			text-decoration: none;
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>
+	<p><a href="#">Text Link</a></p>
+	<p><a href="#" class="none">Text Link</a></p>	
+	<a href="" class="link-button">Link Button</a>
+</body>
+</html>

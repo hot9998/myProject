@@ -1,0 +1,99 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 400px);
+    /* fr : 비율로 크기 설정 */
+    /* repeat(횟수, 크기) : 크기만큼 정해진 횟수로 반복해서 나열 */
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;   
+    width: 85%;
+    margin: 0 auto;
+}
+.box{
+    height: 285px;
+    margin-bottom: 75px;
+}
+.box:visited, .box:link{
+    text-decoration: none;
+}
+.box .text1{	
+    font-size: 14px;
+    color: rgb(113, 113, 113);
+}
+.box .text2{
+    color : rgb(34, 34, 34);
+    font-size: 16px;
+    margin-top: 5px;
+}
+.text1 .star{
+    color: black;
+    float: right;
+}
+.text1 .star1:before{
+    content: "\f005";
+    font-family: FontAwesome; 
+    color: #92174D;
+    padding-right: 3px;
+}
+.text1 .star2:before{
+    content: "\f005";
+    font-family: FontAwesome; 
+    color: #FF385C;
+    padding-right: 3px;
+}
+.text1 .plus{
+    background-color: #92174D;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+.text1 .superhost{
+    border: black solid 1px;
+    color: black;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+.search{
+    width: 85%;
+    margin: 0 auto;
+}
+.title{
+    width: 85%;
+    margin: 0 auto; 
+}
+.title strong{
+    color: #444444;
+    font-size: 1.4em;
+}
+.title #sign{
+    opacity: 0;
+    transition: 0.3s;
+}
+.title #title1:hover, .title:hover #sign{
+    opacity: 1;
+}
+.link:visited, .link:link {
+    text-decoration: none;
+}
+.all .link{
+    color: rgb(0, 132, 137);
+}
+.all .link:hover .stall{
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 132, 137);
+}
+.bg{
+    border-radius: 5px;	
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+}
+.bg1{background-image: url(images/1.jpg);}
+.bg2{background-image: url(images/2.jpg);}
+.bg3{background-image: url(images/3.jpg);}
+.bg4{background-image: url(images/4.jpg);}
+.bg5{background-image: url(images/5.jpg);}
+.bg6{background-image: url(images/6.jpg);}
+.bg7{background-image: url(images/7.jpg);}
+.bg8{background-image: url(images/8.jpg);}

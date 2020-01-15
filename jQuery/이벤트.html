@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>제이쿼리 이벤트</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+      body {
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f4f4;
+        line-height: 1.5em;
+      }
+      header {
+        background: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px solid black;
+        margin-bottom: 10px;
+      }
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>제이쿼리 이벤트</h1>
+    </header>
+    <div id="container">
+      <h3>마우스 이벤트</h3>
+      <button id="btn1" class="cbtn1">버튼 1</button>
+      <button id="btn2">버튼 2</button>
+      <button id="btn3">버튼 3</button>
+    </div>
+    <p class="para1">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum minus
+      vero blanditiis, nihil tenetur earum excepturi obcaecati asperiores magnam
+      reprehenderit consequatur? Delectus exercitationem corrupti ea! Totam
+      eveniet iure alias vitae.
+    </p>
+    <h1 id="coords"></h1>
+    <form action="" id="form">
+      <label>이름</label><br />
+      <input type="text" id="name" name="name" />
+      <br />
+      <label>메일</label><br />
+      <input type="email" id="email" name="email" />
+      <br />
+      <label>성별</label><br />
+      <select name="gender" id="gender">
+        <option value="male">남성</option>
+        <option value="female">여성</option>
+      </select>
+      <br />
+      <input type="submit" />
+    </form>
+
+    <script>
+      // html 문서 로드 후 함수안의 코드 실행
+      // $(document).ready(function() {
+      //   $("#btn1").click(function() {
+      //     alert("버튼이 클릭됨!");
+      //   });
+      // });
+      // 이벤트 연결 메소드 ON
+      // $("#btn1").on("click", function() {
+      //   // alert("버튼이 클릭됨!");
+      //   $(".para1").hide();
+      // });
+      // $("#btn2").on("click", function() {
+      //   $(".para1").show();
+      // });
+      // $("#btn3").on("click", function() {
+      //   $(".para1").toggle();
+      // });
+      // $("#btn1").on("mouseenter", function() {
+      //   $(".para1").toggle();
+      // });
+      // $("#btn1").on("mouseleave", function() {
+      //   $(".para1").toggle();
+      // });
+      // $("#btn1").on("click", function(e) {
+      //   //console.log(e);
+      //   console.log(e.currentTarget.id);
+      //   console.log(e.currentTarget.className);
+      // });
+      // $(document).on("mousemove", function(e) {
+      //   // console.log("좌표 X:" + e.clientX + " Y:" + e.clientY);
+      //   $("#coords").html("좌표 X:" + e.clientX + " Y:" + e.clientY);
+      // });
+      $("input").focus(function() {
+        $(this).css("background", "pink");
+      });
+      // focus : 해당 요소가 활성화 됐을 때
+      $("input").blur(function() {
+        $(this).css("background", "white");
+      });
+      // blur : 해당 요소가 비활성화 됐을 때
+      // this : 해당요소에만 적용
+      $("select#gender").change(function() {
+        alert("바꿨음!");
+      });
+      $("#form").submit(function(e) {
+        e.preventDefault(); // 기본 submit 이벤트 제거
+        var name = $("input#name").val();
+        var email = $("input#email").val();
+        console.log(name);
+        console.log(email);
+      });
+    </script>
+  </body>
+</html>

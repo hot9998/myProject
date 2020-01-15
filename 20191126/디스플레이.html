@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>디스플레이</title>
+	<style>
+		div {
+			display: inline;        /* Default of all elements, unless UA stylesheet overrides */
+			display: inline-block;  /* Characteristics of block, but sits on a line */
+			display: block;         /* makes things like <div> and <section> block */
+			display: none;          /* Hide */
+		}
+		body {
+			line-height: 1.5;
+		}
+		section {
+			padding: 1em;
+		}
+		header {
+			margin-bottom: 1em;
+		}
+		.block {
+			background: blanchedalmond;
+		}
+		.block div {
+			border: 1px dashed chocolate;
+		}
+		.inline-block {
+			background: mistyrose;
+		}
+		.inline-block  div {
+			display: inline-block;
+			height: 40px;
+			border: 1px dashed;
+		}
+		.inline {
+			background: lemonchiffon;
+		}
+		.inline div {
+			display: inline;
+			border: 1px dashed darkgreen;
+		}
+	</style>
+</head>
+<body>
+	<section class="block">
+		<header>Block</header>
+		<div>블록태그 입니다.</div>
+		<div>블록태그 입니다.</div>
+		<div>블록태그 입니다.</div>
+		</section>
+	
+	<section class="inline-block">
+		<header>Inline-block</header>
+		<div>인라인-블록은 높이가 있지요.</div>
+		<div>인라인-블록은 높이가 있지요.</div>
+		<div>인라인-블록은 높이가 있지요.</div>
+	</section>	
+	<section class="inline">
+		<header>Inline</header>
+		<div>인라인 입니다.</div>
+		<div>인라인 입니다.</div>
+		<div>인라인 입니다.</div>
+	</section>	
+</body>
+</html>

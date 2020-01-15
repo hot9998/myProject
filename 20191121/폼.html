@@ -1,0 +1,92 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>폼</title>
+</head>
+<body>
+	<form action=""">
+	이름 : <input type="text"><br>
+	성 : <input type="text"><br>
+	<input type="submit">
+</form>
+
+<form action="">
+	<fieldset>
+		<legend>개인정보:</legend>
+		<h2>lable 태그</h2>
+	<!-- lable : 텍스트 클릭 시 해당 박스로 커서 이동 -->
+	<label>텍스트박스1 <input type="text"> </label>
+	<br>
+	<label for="tx2">텍스트박스2</label>
+	<input type="text" id="tx2"><br>
+	<br>
+	Email : <input type="email"><br>
+	Password : <input type="password"><br>
+	Search : <input type="search"><br>
+	<input type="submit">
+	</fieldset>
+	<!-- fieldset : 폼 요소 그룹 묶기 -->
+</form>
+<form action="">
+	<h1>number range</h1>
+	<fieldset>
+		<legend>HTML5 &lt; number &gt; </legend>
+		<form action="">
+		number : <input type="number" min="0" max="100" step="10" name="number">
+	</fieldset>
+</form>
+
+<form action="">
+	<fieldset>
+		<legend>HTML5 &lt; range &gt; </legend>
+		<form action="">
+		range : <input type="range" min="0" max="100" step="10" name="range">
+	</fieldset>
+	<br><br>
+	<input type="submit">
+	<input type="reset">
+</form>
+
+<form action="">
+	<fieldset>
+		<!-- checkbox : 여러개 선택 -->
+		<legend>check box</legend>
+		<h3>가지고 싶은 것은?</h3>
+		<input type="checkbox" name="cb1" value="bike"> 바이크
+		<input type="checkbox" name="cb2" value="car"> 자동차
+		<input type="checkbox" name="cb3" value="boat"> 보트
+	</fieldset>
+	<br>
+	<fieldset>
+		<!-- radio : 선택지 중 하나만 선택 -->
+		<legend>radio</legend>
+		<h3>좋아하는 과일은 ?</h3>
+		<input type="radio" name="rd1" value="apple"> 사과
+		<input type="radio" name="rd1" value="banana"> 바나나
+		<input type="radio" name="rd1" value="grapde"> 포도
+	</fieldset>
+	<br><br>
+	<input type="submit">
+	<input type="reset">
+</form>
+
+<form>
+    <fieldset>
+		<!-- 날짜를 입력하려면 알아서 달력이 뜸
+		 -->
+	    <legend>날짜 월 주</legend><br>
+        <input type="date"><br><br> 
+        <input type="month"><br><br>         
+        <input type="week"><br><br>    
+    </fieldset>
+    <br><br>
+    <input type = "submit">
+    <input type = "reset">
+</form>
+
+
+​
+	
+</body>
+</html>

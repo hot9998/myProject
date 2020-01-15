@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>점보트론, 버튼, 프로그레스 바, 툴팁, 팝오버</title>
+    <!-- 다운로드 방법 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+    $(function(){
+      // 툴팁 초기화 스크립트
+      $('[data-toggle="tooltip"]').tooltip();      
+      // 팝오버 초기화 스크립트
+      $('[data-toggle="popover"]').popover();
+    })
+    </script>
+    
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="m-4">버튼 스타일</h2>
+      <div>
+        <button type="button" class="btn">Basic</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-link">Link</button>
+      </div>
+      <hr />
+      <!-- 버튼 클래스 사용 태그/타입 -->
+      <a href="" class="btn btn-primary">링크</a>
+      <button type="submit" class="btn btn-success">버튼</button>
+      <input type="button" value="Input" class="btn btn-light" />
+      <input type="submit" value="Submit" class="btn btn-warning" />
+      <input type="reset" value="Reset" class="btn btn-info" />
+      <hr />
+      <h2 class="m-4">버튼 아웃라인 스타일</h2>
+      <div>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">
+          Secondary
+        </button>
+        <button type="button" class="btn btn-outline-success">
+          Success
+        </button>
+        <button type="button" class="btn btn-outline-info">
+          Info
+        </button>
+        <button type="button" class="btn btn-outline-warning">
+          Warning
+        </button>
+        <button type="button" class="btn btn-outline-danger">
+          Danger
+        </button>
+        <button type="button" class="btn btn-outline-dark">
+          Dark
+        </button>
+        <button type="button" class="btn btn-outline-light">
+          Light
+        </button>
+      </div>
+      <!-- 버튼 그룹 -->
+      <h2 class="m-4">버튼 그룹</h2>
+      <!-- btn-group을 사용하면 버튼을 그룹으로 묶어줌 -->
+      <div class="btn-group my-5">
+        <button class="btn btn-primary">Left</button>
+        <button class="btn btn-secondary">Middle</button>
+        <button class="btn btn-primary">Right</button>
+      </div>
+      <br />
+      <!-- vertical : 세로로 묶어줌 -->
+      <div class="btn-group-vertical">
+        <button class="btn btn-primary">Left</button>
+        <button class="btn btn-secondary">Middle</button>
+        <button class="btn btn-primary">Right</button>
+      </div>
+      <h2 class="m-4">Badges</h2>
+      <div>        <!-- span 태그에 badge 클래스를 사용 -->
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-seoncdary">Secondary</span>
+        <span class="badge badge-success">Success</span>
+        <span class="badge badge-danger">Danger</span>
+        <span class="badge badge-warning">Warning</span>
+        <span class="badge badge-info">Info</span>
+        <span class="badge badge-light">Light</span>
+        <span class="badge badge-dark">Dark</span>
+      </p>
+      <h2 class="m-4">프로그레스 바</h2>
+      <!-- Blue -->
+      <div class="progress">
+        <div class="progress-bar" style="width: 10%;"></div>
+      </div><br>
+      <!-- Green -->
+      <div class="progress">
+        <div class="progress-bar bg-success" style="width: 20%;"></div>
+      </div><br>
+      <!-- Turqoise -->
+      <div class="progress">
+        <div class="progress-bar bg-info" style="width: 30%;"></div>
+      </div><br>
+      <!-- Green -->
+      <div class="progress">
+        <div class="progress-bar bg-warning" style="width: 40%;"></div>
+      </div><br>     
+    </div>    
+    <!-- striped -->
+    <div class="progress">
+      <div class="progress-bar bg-info progress-bar-striped" style="width: 30%;"></div>
+    <!-- Animated -->
+    </div><br>     
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%;"></div>
+    </div><br>  
+    <!-- Multi -->
+    <div class="progress">
+      <div class="progress-bar bg-success" style="width: 40%;">Free Space</div>
+      <div class="progress-bar bg-warning" style="width: 10%;">Warning</div>
+      <div class="progress-bar bg-danger" style="width: 20%;">Danger</div>
+    </div><br>  
+    <h2 class="m-4">툴팁(tooltips)</h2>
+    <!-- TOOLTIPS : 버튼에 마우스 올릴 시 툴팁 -->
+    <button class="btn btn-primary" data-toggle="tooltip"  data-placement="top" title="툴팁1">툴팁 위쪽</button>
+    <button class="btn btn-success" data-toggle="tooltip" data-placement="right" title="툴팁2">툴팁 오른쪽</button>
+    <button class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="툴팁3">툴팁 아래쪽</button>
+    <button class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="툴팁4">툴팁 왼쪽</button>    
+    <br>
+    <!-- Popover : 버튼 클릭 시 팝오버 -->
+    <h2 class="m-4">팝오버(Popovers)</h2>
+    <button class="btn btn-danger" data-toggle="popover" data-placement="top" data-content="내용을 적습니다1">툴팁 위쪽</button>
+    <button class="btn btn-primary" data-toggle="popover" data-placement="right" data-content="내용을 적습니다2">툴팁 오른쪽</button>
+    <button class="btn btn-warning" data-toggle="popover" data-placement="bottom" data-content="내용을 적습니다3">툴팁 아래쪽</button>    
+    <button class="btn btn-info" data-toggle="popover" data-placement="left" data-content="내용을 적습니다4">툴팁 왼쪽</button> 
+    
+  </div>    
+  
+  </body>
+</html>

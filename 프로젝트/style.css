@@ -1,0 +1,633 @@
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body { height: 100%;}
+body {     
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+.main-page{
+    height: 100%;
+    background-image: url("images/index.jpg");
+    background-repeat: no repeat;
+    background-size: cover;
+}
+.main-navi { 
+    padding: 30px;
+    height: 110px;
+    display: flex;
+    justify-content: flex-end;
+}
+.main-navi .item > a, .main-navi .item > button {
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+}
+.main-navi .item > button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    opacity: 1;
+}
+
+.main-navi .item {
+    margin-left: 30px;
+    position: relative;
+}   
+.main-navi .logo{
+    margin-right: auto;
+}
+.main-navi .item:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Main form */
+.main-form {
+    background-color: white;
+    margin-left: 10%;
+    margin-top: 1%; 
+    padding: 32px 32px 24px 32px;
+    width: 441px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* 아래 글씨 */
+.bottom-text .item{
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    position: absolute; bottom: 2%; right: 2%;
+    text-align: right;
+    line-height: 150%;
+}
+.bottom-text .item:hover{
+    text-decoration: underline;
+}
+.main-form h1{
+    color: #484848;
+    font-size: 30px;
+    line-height: 36px;
+}
+.main-form span{
+    font-size: 12px;
+    font-weight: 800;
+}
+/* 검색창 박스 */
+.main-form .box{
+    border-radius: 3px;
+    height: 48px;
+    font-size: 17px;
+    margin-top: 8px;  
+    margin-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-shadow: none;
+    border : 1px solid #EBEBEB;
+}
+.main-form .box1:focus, .main-form .box2:focus{
+    border: 1px solid rgb(0, 132, 137);
+    outline: none;
+}
+.main-form .box1{
+    width: 100%;
+}
+.main-form .box2{
+    width: 50%;
+} 
+.main-form div > #people{
+    background-color: white;
+    text-align: left;
+    color: #767676;
+    cursor: pointer;
+}
+.main-form div > #people:active, .main-form div > #people:focus {
+    border: 2px solid rgb(156, 190, 245);
+}
+    
+.main-form div > #people img{
+    float: right;
+    width: 12px;
+    padding-top: 5px;
+}
+#cout{
+    position: relative;
+    left: 39%;
+}
+.search{
+    width: 377px;
+    height: 56px;
+    padding-top: 8px;
+}
+.search > button{
+    float: right;
+    cursor: pointer;
+    background-color: #FF5A5F;
+    width: 80px;
+    height: 48px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-weight: 800;
+    font-size: 16px;
+    color: white;
+}
+.search > button:active{
+    background-color: #df3c47;
+}
+
+/* join 화면 */
+.join-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+.join-window {
+    width: 568px;
+    height: 363px;
+    padding: 32px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 화면 정 가운데 오게 한다. */
+}
+.join-popup .form {
+    position: relative;
+    width: 504px;
+    height: 48px;
+    padding: 22px, 10px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 806;
+}
+.join-popup .form img{
+    width: 18px; 
+    margin-right: 8px;
+    position: relative;
+    top: 3px;
+}
+.join-popup .form span{
+    font-size: 16px;
+}
+/* 닫기 버튼 */
+.close-button{
+    width: 504px;
+    height: 34px;
+}
+.join-popup .close-button > button {
+    background-color: white;
+    border-width: 0px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 100%;
+}
+.join-popup .close-button > button:active {
+    box-shadow: 0px 0px 4px 2px rgb(216,216,216);
+}
+/* 페이스북 로그인 */
+.join-popup .fbook-login {
+    color: rgb(255, 255, 255);
+    background: rgb(69, 104, 178);
+    border: none;
+}
+.join-popup .fbook-login:active{
+    background-color:rgb(37, 80, 151) !important;
+}
+/* 구글 로그인 */
+.join-popup .google-login{
+    color: rgb(72, 72, 72);
+    background: white;
+    border-radius: 4px;
+    border:rgb(118, 118, 118) solid 2px;
+}
+.join-popup .google-login:active{
+    background: rgb(226, 226, 226) !important;
+}
+/* 이메일 로그인 */
+.join-popup .email-login{
+    color: white;
+    background: rgb(255, 90, 95);
+    border-color: transparent;
+}
+/* - 또는 - */
+.line-combo{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.join-popup .line-combo {
+    text-align: center;
+    margin: 15px 0;
+    position: relative
+}
+.join-popup .line-combo > span {
+    font-weight: 800;
+    color: rgb(118, 118, 118);
+}
+.join-popup .line-left{
+    width: 220px;
+    border-bottom: 1px solid #e4e4e4;
+    position: absolute;
+    top:50%    
+}
+.join-popup .line-right{
+    width: 220px;
+    border-bottom: 1px solid #e4e4e4;
+    position: absolute; right: 0;
+    top:50%
+}		
+.join-popup .line-all{
+    width: 504px;
+    border-bottom: 1px solid #e4e4e4;
+}		
+/* join 끝 */
+/* 로그인 화면 */
+.login-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.login-window {
+    width: 568px;
+    height: 567px;
+    padding: 32px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form > input{
+    box-shadow: none;
+    width: 475px;
+    height: 46px;
+    padding: 11px;
+    border: none;
+}
+.login-window .empw {
+    width: 504px;
+    height: 48px;
+    padding: 22px, 10px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    border: 1px solid #484848;
+}
+.login-window .empw > input{
+    height: 46px;
+    width: 475px;
+    padding: 11px;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    line-height: inherit;    
+    font-family: inherit;
+    font-weight: inherit;
+    background-color: transparent;
+}
+.login-window .empw > img{
+    width: 15.99px;
+}
+.login-window > #lgbutton{
+    margin-top: 15px;
+    background-color: #FF5A5F;
+    color: white;    
+    font-size: 16px;
+    font-weight: 800;
+    border-color: transparent;
+}
+
+#cb1 span{
+    font-size: 16px;
+    line-height: 22px;
+}
+.pwshow{
+    color: #008489;
+    font-size: 14px;
+    text-decoration: none;
+}
+.pwshow:hover{
+    text-decoration: underline;
+}
+
+/* 이미 계정이 있는경우  */
+.already{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375em;
+    color: rgb(72, 72, 72);
+}
+.already a{
+    color: #008489;
+}
+.already a:link, #already a:visited{
+    text-decoration: none;
+    font-weight: bold;
+}
+.already a:hover{
+    text-decoration: underline;
+}
+/*   Main page 끝      */
+/*   Sub page 시작      */
+.sub-page {
+    margin-top: 30px;
+    padding: 0 10%;
+   /*  가로축으로 패딩을 10% 줘서 양쪽 옆의 공간을 뛰움 */
+}
+.sub-page section{
+    width: 100%;
+}
+.sub-page .text-1 { font-size: 24px; font-weight: 800; }
+.sub-page .text-2 { font-size: 16px; font-weight: 600; }
+.sub-page .text-3 { font-size: 14px; font-weight: 800; }
+.sub-page .text-4 { font-size: 48px; font-weight: 600; }
+.sub-page .text-5 { font-size: 18px; }
+.sub-page  a{
+    text-decoration: none;
+    color: black;
+}
+/* 둘러보기 시작 */
+.look-around{
+    height: 180px;
+    display: flex;
+}
+.look-around > .wrapper {
+    cursor: pointer;
+}
+.look-around > .wrapper > div {
+    display: flex; 
+    position: relative;
+    height: 96.97px;
+    width: 498px;
+    margin: 15px 15px 15px 0;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+}
+.look-around > .wrapper > div > .text {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.look-around > .wrapper .home .picture img {
+    border-radius: 10px 0 0 10px / 10px 0 0 10px;
+}
+/* 둘러보기 끝 */
+/* Luxe 시작 */
+.sub-page > .Luxe{
+    height: 500px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background: url(images/2_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.sub-page > .Luxe > .Luxe-box{
+    margin-left: 5%;
+    padding-top: 100px;
+    width: 400px;
+    height: 100%;
+}
+.sub-page > .Luxe > .Luxe-box p{
+    margin-bottom: 24px;
+}
+.sub-page > .Luxe > .Luxe-box > button{
+    width: 163.42px;
+    height: 48px;
+    margin-top: 26px;
+    cursor: pointer;
+    background-color: white;
+    color: #484848;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 7px;
+    border: none;
+    outline: none;    
+}
+/* Luxe 끝 */
+/* adventure 시작 */
+/* 어드벤쳐 위 링크 */
+.sub-page > .adventure-link{
+    position: relative;
+    color: black;
+    width: 604px;
+    height: 80px;
+}
+.sub-page > .adventure-link > #sign1{
+    width: 50px;
+    position: relative;
+    top: -38px;
+    left: 33%;
+    opacity: 0;
+    transition: 0.3s;
+}
+.adventure-link:hover #sign1{
+    opacity: 1;
+}
+/* 어드벤쳐 링크 끝 */
+/* 어드벤쳐 그리드 시작 */
+.sub-page > .adventure > .wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 241px);
+    grid-gap: 15px;   
+    justify-content: center;
+}
+.sub-page > .adventure div{
+    margin-bottom: 5px;
+}
+.sub-page > .adventure > .wrapper > .box{
+    height: 340px;
+    margin-bottom: 75px;
+    text-decoration: none;
+    color: black;
+}
+.sub-page > .adventure .wrapper .box .text-1{font-size: 12px;}
+.sub-page > .adventure .wrapper .box .text-2{font-size: 16px; font-weight: 300;}
+.sub-page > .adventure .box .star{
+    color: black;
+    font-size: 14px;
+}
+.sub-page > .adventure .box .star > span{
+    color: #717171;
+    font-size: 14px;
+}
+.sub-page > .adventure .box .star:before{
+    content: "\f005";
+    font-family: FontAwesome; 
+    color: black;
+    padding-right: 3px;    
+}
+.sub-page > .adventure .wrapper .box .bg{
+    border-radius: 5px;	
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+}
+.sub-page > .adventure .wrapper > .box > .bg1{background-image: url(images/3_1.jpg);}
+.sub-page > .adventure .wrapper > .box > .bg2{background-image: url(images/3_2.jpg);}
+.sub-page > .adventure .wrapper > .box > .bg3{background-image: url(images/3_3.jpg);}
+.sub-page > .adventure .wrapper > .box > .bg4{background-image: url(images/3_4.jpg);}
+.sub-page > .adventure .wrapper > .box > .bg5{background-image: url(images/3_5.jpg);}
+.sub-page > .adventure .wrapper > .box > .bg6{background-image: url(images/3_6.jpg);}
+/* 어드벤처 섹션 끝 */
+
+/* 모두 보기 */
+.sub-page .all{
+    margin-top: 60px;
+    margin-bottom: 100px;
+    
+}
+.sub-page .all{
+    margin-top: 30px;    
+}
+.sub-page .all a strong{
+    color: rgb(0, 132, 137);
+}
+.sub-page .all:hover .stall{
+    text-decoration: underline;
+    color: rgb(0, 132, 137);
+}
+.sub-page .all img{
+    width: 10px;
+}
+
+/* 모두 보기 끝 */
+
+/* 플러스 숙소 시작 */
+.sub-page > .plus{
+    position: relative;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: url(images/3_7.jpg) center center / cover no-repeat;
+}
+.sub-page > .plus > .plus-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+.sub-page > .plus > button{
+    width: 133.09px;
+    height: 46px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%, 100%);
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+}
+.sub-page > .plus > button:active{
+    background-color: rgb(226, 226, 226);    
+}
+/* 플러스 숙소 끝 */
+
+/* 전 세계 숙소 시작 */
+.sub-page > .world > .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 364px);
+    /* fr : 비율로 크기 설정 */
+    /* repeat(횟수, 크기) : 크기만큼 정해진 횟수로 반복해서 나열 */
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;   
+    margin-top: 20px;
+    justify-content: center;
+}
+.sub-page > .world > .wrapper .box{
+    height: 285px;
+    margin-bottom: 75px;
+}
+.sub-page > .world > .wrapper .box .text1{	
+    font-size: 14px;
+    color: rgb(113, 113, 113);
+}
+.sub-page > .world > .wrapper .box .text2{
+    color : rgb(34, 34, 34);
+    font-size: 16px;
+    margin-top: 5px;
+}
+.sub-page > .world .text1 .star{
+    color: black;
+    float: right;
+}
+.sub-page > .world .text1 .star1:before{
+    content: "\f005";
+    font-family: FontAwesome; 
+    color: #92174D;
+    padding-right: 3px;
+}
+.sub-page > .world .text1 .star2:before{
+    content: "\f005";
+    font-family: FontAwesome; 
+    color: #FF385C;
+    padding-right: 3px;
+}
+.sub-page > .world .text1 .plus{
+    background-color: #92174D;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+.sub-page > .world .text1 .superhost{
+    border: black solid 1px;
+    color: black;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+.sub-page > .world-rooms #sign2 {
+    opacity: 0;
+    transition: 0.3s;
+}
+.sub-page > .world-rooms:hover #sign2{
+    opacity: 1;    
+}
+.sub-page > .world .bg{
+    border-radius: 5px;	
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+}
+.sub-page > .world .bg1{background-image: url(images/1.jpg);}
+.sub-page > .world .bg2{background-image: url(images/2.jpg);}
+.sub-page > .world .bg3{background-image: url(images/3.jpg);}
+.sub-page > .world .bg4{background-image: url(images/4.jpg);}
+.sub-page > .world .bg5{background-image: url(images/5.jpg);}
+.sub-page > .world .bg6{background-image: url(images/6.jpg);}
+.sub-page > .world .bg7{background-image: url(images/7.jpg);}
+.sub-page > .world .bg8{background-image: url(images/8.jpg);}

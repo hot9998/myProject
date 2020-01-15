@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>테이블 예제</title>
+	<style>
+		table{
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th{
+			text-align: left;
+			height: 2.5em;
+			background: skyblue;
+			color: white;
+			padding-left: 10px;
+		}
+		td{
+			height: 2em;
+			padding-left: 10px;
+		}
+		tr:nth-child(even){
+			background: lightgray;
+		}
+		tr:hover{
+			background: tomato;
+			color: white;
+			transition: 0.5s;
+		}
+		/* 페이지네이션 */
+		.pagination {
+			display: flex;
+			justify-content: center;
+		}
+		.pagination a {
+			padding: 8px 16px;
+			text-decoration: none;
+			border: 1px solid #ddd;
+		}
+		.pagination a:hover {background-color: #ddd;}
+		.pagination a:first-child {
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+		.pagination a:last-child {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}		
+		</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>번호</th>
+			<th>제목</th>
+			<th>작성자</th>
+			<th>날짜</th>
+			<th>조회수</th>
+		</tr>
+		<tr>
+			<td>99</td>
+			<td>누가 CSS 공부한다면서요?</td>
+			<td>홍길동</td>
+			<td>2019.07.02</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>꺼진불도 다시보자.gif</td>
+			<td>김유신</td>
+			<td>2019.07.02</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>101</td>
+			<td>아 배고픈데...</td>
+			<td>걸신</td>
+			<td>2019.07.02</td>
+			<td>7</td>
+		</tr>
+	</table>
+	<br>
+	<div class="pagination">
+		<a href="#">&laquo;</a>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<a href="#">6</a>
+		<a href="#">&raquo;</a>
+	</div>	
+</body>
+</html>	

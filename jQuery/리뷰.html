@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery - 리뷰</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+      .box1 {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        float: left;
+        background: green;
+        border: 10px outset;
+        cursor: pointer;
+      }
+      .para {
+        color: red;
+        margin: 0;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contents">
+      <ul class="people">
+        <li>첫번째</li>
+        <li>두번째</li>
+      </ul>
+    </div>
+    <h1 id="test1">hover 이벤트</h1>
+    <button id="btn1">버튼1</button>
+    <hr />
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <p class="para">녹색박스를 클릭!</p>
+    <hr />
+    <br />
+    <button id="foo">이벤트</button>
+
+    <script>
+      $("#contents ul.people li").each(function() {
+        console.log($(this).text());
+      });
+      $("#test1").on({
+        mouseenter: function() {
+          $("#test1").css("color", "red");
+        },
+        mouseleave: function() {
+          $("#test1").css("color", "blue");
+        }
+      });
+      // one 메소드
+      $("#btn1").one("click", function() {
+        console.log("one() 이벤트는 한번만 실행");
+      });
+      // one 메소드 예제
+      var n = 0;
+      $(".box1").one("click", function() {
+        $(this).css({
+          borderStyle: "inset",
+          cursor: "auto"
+        });
+        var index = $(".box1").index(this);
+        $(".para").text(
+          "디브중 인덱스 " +
+            (index + 1) +
+            "번 클릭." +
+            " 전체 " +
+            ++n +
+            "번 클릭했음."
+        );
+      });
+      // off 함수
+      $("#foo").on("click", function(e) {
+        alert("off() 메소드 이벤트 취소!");
+        $(this).off(e);
+        // $(this).off();
+        // 괄호 안을 비워도 해당 이벤트 삭제
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modal</title>
+    <!-- 다운로드 방법 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Modal 오픈 버튼 -->
+    <div class="container mt-5">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#myModal"
+      >
+        Open modal
+      </button>
+      <!-- Modal 오픈 링크 -->
+      <a
+        href=""
+        class="btn btn-success"
+        data-toggle="modal"
+        data-target="#myModal"
+        >Open modal</a
+      >
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Modal 그리드</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label>한글이름</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label>영문이름</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label>Comments</label>
+                    <textarea name="" class="form-control"></textarea>
+                  </div>
+                </div>
+              </form
+            </div>
+            <!-- Footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Send Email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

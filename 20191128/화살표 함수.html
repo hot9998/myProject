@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>화살표 함수</title>
+</head>
+<body>
+	<script>
+		function sum(a,b){
+			return a+b;
+		}
+		document.write(sum(1,2)+'<br>');
+		var sum1 = function(a,b){
+			return a+b;
+		}
+		document.write(sum1(1,2)+'<br>');
+		var sum2 = (a,b) =>{return a+b};
+		document.write(sum2(1,2)+'<br>');
+		var sum3 = (a,b) => a+b;
+		// 코드가 한줄일 때 {}, return 생략 가능
+		document.write(sum3(1,2)+'<br>');
+
+		var double1 = function(n) { return n * 2 };
+		var double2 = n => n*2;    // 매개변수(arguments)가 한개일 때 ()도 생략가능
+
+		document.write(double1(2)+'<br>');
+		document.write(double2(3)+'<br>');
+
+		var sayHi = () => alert("Hello!");
+				
+	</script>
+		<button onclick="sayHi()">Hi</button>	
+</body>
+</html>

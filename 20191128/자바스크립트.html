@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>자바스크립트</title>
+</head>
+<body>
+	<!-- 버튼 클릭 시 경고창에 hi 출력 -->
+	<button onclick="alert('hi')">hi</button>
+	<br><br>
+	<!-- 버튼 클릭 시 백그라운드 색상을 변경 -->
+	<button onclick="document.querySelector('body').style.background='tomato';">tomateo</button>
+	<button onclick="document.querySelector('body').style.background='white';">normal</button>
+	<br><br>
+	<!-- HI버튼을 클릭 했을때 콘솔에 clicked 출력 -->
+	<button onclick="console.log('clicked')">HI</button>
+	<br><br>
+	<script>
+		document.write(2*8);
+	</script>	
+	2*8
+	<br><br>
+	<script>
+		alert(5>4);
+		alert("apple" > "pineapple");
+		alert("2" > "12");
+		alert(undefined == null);
+		alert(undefined === null);
+	</script>
+</body>
+</html>
